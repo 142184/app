@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="libs/jquery.mobile-1.3.2.min.css">
+<script src="libs/jquery-1.8.3.min.js"></script>
+<script src="libs/jquery.mobile-1.3.2.min.js"></script>
+<script src="libs/jquery.storageapi.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+</head>
+<body>
+
+
+
+
+
+<div data-role="page" id="head" data-theme="a">
+  <div data-role="header" data-position="fixed">
+  <h1>胖胖的最爱</h1>
+  </div>
+  <div data-role="content">
+   <div align="center"> <img src="libs/images/69_140109141645_1.jpg" width="400"  ></div>
+  <p align="center">欢迎使用胖胖的最爱！</p>
+  <a data-role="button" href="#login" data-transition="slide">登陆</a>
+  <a data-role="button" href="#regdit"data-transition="slide">注册</a>
+ </div>
+
+  <div data-role="footer" data-position="fixed">
+  <h1>BIPT-02</h1>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div data-role="page" id="login" data-theme="a">
+  <div data-role="header" data-position="fixed" >
+  <a href="#" data-role="button" data-rel="back"  data-inline="true"  >返回</a>
+  <h1>胖胖的最爱</h1>
+ </div>
+  <div data-role="content">
+ <div align="center"> <img src="libs/images/69_140109141645_1.jpg" width="400"  ></div>
+ 
+ <form method="post" action="demoform.asp">
+  <div data-role="fieldcontain">
+   <label for="fullname">账号：</label>
+    <input type="text" name="fullname" id="fullname" placeholder="请输入您的账号.."  >
+
+    <label for="pwd">密码：</label>
+    <input type="password" name="pwd" id="pwd"  placeholder="请输入您的密码..">
+  </div>
+</form>
+ 
+   <a href="#" data-role="button" id="denglu" >登陆</a>
+  </div>
+  <div data-role="footer" data-position="fixed">
+  <h1>BIPT-02</h1>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div data-role="page" id="regdit" data-theme="a">
+  <div data-role="header" data-position="fixed" >
+  <a href="#" data-role="button" data-rel="back"  data-inline="true"  >返回</a>
+  <h1>胖胖的最爱</h1>
+
+  </div>
+  <div data-role="content">
+ 
+     <div align="center"> <img src="libs/images/69_140109141645_1.jpg" width="400"  ></div>
+ 
+     <form method="post" action="demoform.asp">
+   
+       <label for="zhanghao">账号：</label>
+          <input name="zhanghao" type="text" id="zhanghao" maxlength="10" placeholder="请输入您的账号.."  >
+
+          <label for="mima">密码：</label>
+          <input type="text" name="mima" id="mima"  placeholder="请输入您的密码..">
+          <label for="pwd">手机：</label>
+          <input type="text" name="tel" id="tel"  placeholder="请输入您的手机..">
+          <label for="pwd">住址：</label>
+          <input type="text" name="add" id="add"  placeholder="请输入您的地址..">
+          <label for="iden">身份证号：</label>
+          <input name="iden" type="text" id="iden" size="18" maxlength="18"  placeholder="请输入您的身份证号..">
+          <label for="qq">QQ号：</label>
+          <input type="text" name="qq" id="qq"  placeholder="请输入您的qq.."> 
+          <div>
+          <label for="sprinkles">您是胖子吗:</label>  
+          <select name="sprinkles" id="sprinkles" data-role="slider">  
+          <option value="off">No</option>  
+           <option value="on">Yes</option>  
+            </select>  
+         </div>
+    </form>
+   <a href="#head" data-role="button" id="tijiao">提交</a>
+  </div>
+  
+
+  <div data-role="footer" data-position="fixed">
+  <h1>BIPT-02</h1>
+  </div>
+  
+</div>
+
+
+
+
+
+<div data-role="page" id="biao" data-theme="a">
+  <div data-role="header" data-position="fixed">
+  <a href="#head" data-role="button"   data-inline="true" class="ui-btn-right" >退出</a>
+
+  <h1>胖胖的最爱</h1>
+  </div>
+
+  <div data-role="content">
+
+
+<form method="post" action="demoform.asp">
+  <div data-role="fieldcontain">
+     <H2 align="center" > 标准</H2>
+    
+     <label for="dkg">当前体重：</label>
+     <input type="number" name="dkg" id="dkg" placeholder="KG" >
+     <label for="mkg">目标体重：</label>
+     <input type="number" name="mkg" id="mkg" placeholder="KG" >
+      <a href="#" data-role="button" id="tijiaokg" >提交</a>
+   
+   
+
+  
+</form>
+
+
+   
+
+  </div>
+
+ <div data-role="footer" data-position="fixed">
+   <div data-role="navbar">
+      <ul>
+        <li><a href="#biao"class="ui-btn-active ui-state-persist" >标准</a></li>
+        <li><a href="#liang" >摄入量</a></li>
+        <li><a href="#zhong" >体重</a></li>
+        <li><a href="#tong" >统计</a></li>
+      </ul>
+ </div>
+  <h1>BIPT-02</h1>
+  </div>
+
+</div>
+</div>
+
+
+
+
+
+
+<div data-role="page" id="liang" data-theme="a">
+     <div data-role="header" data-position="fixed">
+     <a href="#head" data-role="button"   data-inline="true" class="ui-btn-right" >退出</a>
+     <h1>胖胖的最爱</h1>
+     </div>
+
+    <div data-role="content">
+
+
+
+ <form method="post" action="demoform.asp">
+  <div data-role="fieldcontain" class="inpu">
+     <H2 align="center" > 摄入量</H2>
+      <div align="center" id="oneone">
+     <label for="one">星期一：</label>
+     <input type="number" name="one" id="one" placeholder="KG"  data-role="none" >
+      <a href="#" data-role="button" id="tijiao1"  data-inline="true" data-mini="true">提交</a>
+      </div>
+     <div align="center" id="oneone">
+    <label for="two">星期二：</label>
+    <input type="number" name="two" id="two" placeholder="KG"data-role="none">
+    <a href="#" data-role="button" id="tijiao2"  data-inline="true" data-mini="true">提交</a>
+     </div>  
+      <div align="center" id="oneone">
+    <label for="three">星期三：</label>
+    <input type="number" name="three" id="three" placeholder="KG" data-role="none" >
+    <a href="#" data-role="button" id="tijiao3"  data-inline="true" data-mini="true">提交</a>
+      </div>
+       <div align="center" id="oneone">
+    
+     <label for="four">星期四：</label>
+    <input type="number" name="four" id="four" placeholder="KG" data-role="none">
+    <a href="#" data-role="button" id="tijiao4"  data-inline="true" data-mini="true">提交</a>
+       </div>  
+      <div align="center" id="oneone"> 
+    <label for="five">星期五：</label>
+    <input type="number" name="five" id="five" placeholder="KG" data-role="none">
+    <a href="#" data-role="button" id="tijiao5"  data-inline="true" data-mini="true">提交</a>
+        </div>
+       <div align="center" id="oneone">
+    <label for="six">星期六：</label>
+    <input type="number" name="six "id="six" placeholder="KG" data-role="none">
+    <a href="#" data-role="button" id="tijiao6"  data-inline="true" data-mini="true">提交</a>
+       </div>
+       <div align="center" id="oneone">
+     <label for="seven">星期日：</label>
+    <input type="number" name="seven" id="seven" placeholder="KG"data-role="none" >
+    <a href="#" data-role="button" id="tijiao7"  data-inline="true" data-mini="true">提交</a>
+       </div >
+    
+    <label for="totle_liang">总摄入量：</label>
+    <input name="totle_liang" type="text" id="totle_liang" readonly="readonly"  placeholder="KG">
+  </div>
+  
+</form>
+
+  </div>
+
+ <div data-role="footer" data-position="fixed">
+ <div data-role="navbar">
+      <ul>
+        <li><a href="#biao"  >标准</a></li>
+        <li><a href="#liang" class="ui-btn-active ui-state-persist">摄入量</a></li>
+        <li><a href="#zhong" >体重</a></li>
+        <li><a href="#tong" >统计</a></li>
+      </ul>
+ </div>
+  <h1>BIPT-02</h1>
+  </div>
+</div>
+
+<div data-role="page" id="zhong" data-theme="a">
+  <div data-role="header" data-position="fixed">
+  <a href="#head" data-role="button"   data-inline="true" class="ui-btn-right" >退出</a>
+
+  <h1>胖胖的最爱</h1>
+  </div>
+
+  <div data-role="content">
+
+
+<form method="post" action="demoform.asp">
+  <div data-role="fieldcontain" class="inpu">
+     <H2 align="center" > 体重</H2>
+      <div align="center" id="oneone">
+     <label for="one1">第一周：</label>
+     <input type="number" name="one1" id="one1" placeholder="KG"  data-role="none">
+      <a href="#" data-role="button" id="1tijiao"  data-inline="true" data-mini="true">提交</a>
+      </div>
+     <div align="center" id="oneone">
+    <label for="two2">第二周：</label>
+    <input type="number" name="two2" id="two2" placeholder="KG"data-role="none">
+    <a href="#" data-role="button" id="2tijiao"  data-inline="true" data-mini="true">提交</a>
+     </div>  
+      <div align="center" id="oneone">
+    <label for="three3">第三周：</label>
+    <input type="number" name="three3" id="three3" placeholder="KG" data-role="none">
+    <a href="#" data-role="button" id="3tijiao"  data-inline="true" data-mini="true">提交</a>
+      </div>
+       <div align="center" id="oneone">
+    
+     <label for="four4">第四周：</label>
+    <input type="number" name="four4" id="four4" placeholder="KG" data-role="none">
+    <a href="#" data-role="button" id="4tijiao"  data-inline="true" data-mini="true">提交</a>
+       </div>  
+      <div align="center" id="oneone"> 
+    <label for="five5">第五周：</label>
+    <input type="number" name="five5" id="five5" placeholder="KG" data-role="none">
+    <a href="#" data-role="button" id="5tijiao"  data-inline="true" data-mini="true">提交</a>
+        </div>
+       <div align="center" id="oneone">
+    <label for="six6">第六周：</label>
+    <input type="number" name="six6 "id="six6" placeholder="KG" data-role="none">
+    <a href="#" data-role="button" id="6tijiao"  data-inline="true" data-mini="true">提交</a>
+       </div>
+     
+    
+    <label for="totle_tizhong">体重变化：</label>
+    <input name="totle_tizhong" type="text" id="totle_tizhong" readonly="readonly"  placeholder="KG">
+  </div>
+  
+</form>
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+ <div data-role="footer" data-position="fixed">
+  <div data-role="navbar">
+      <ul>
+        <li><a href="#biao" >标准</a></li>
+        <li><a href="#liang"  >摄入量</a></li>
+        <li><a href="#zhong"class="ui-btn-active ui-state-persist" >体重</a></li>
+        <li><a href="#tong" >统计</a></li>
+      </ul>
+ </div>
+  <h1>BIPT-02</h1>
+  </div>
+
+</div>
+
+
+
+
+
+<div data-role="page" id="tong" data-theme="a">
+  <div data-role="header" data-position="fixed">
+  <a href="#head" data-role="button"   data-inline="true" class="ui-btn-right" >退出</a>
+  <h1>胖胖的最爱</h1>
+  </div>
+
+  <div data-role="content">
+  <form method="post" action="demoform.asp">
+    
+     <H2 align="center" > 统计</H2>
+    <div>
+     <label for="zongkg">当前体重：</label>
+     <input name="zongkg" type="text" id="zongkg" readonly="readonly" >
+     </div>
+     <div>
+     <label for="xiaoguo">减肥效果：</label>
+     <input name="xiaoguo" type="text" id="xiaoguo" readonly="readonly">
+     </div>
+     <div >
+     <label for="zongjie">总结：</label>
+     <input name="zongjie" type="text" id="zongjie" readonly="readonly" >
+     </div>
+     <div >
+     <label for="adv">建议：</label>
+     <input name="adv" type="text" id="adv" readonly="readonly"  >
+     </div>
+      <a href="#" data-role="button" id="re" >刷新</a>
+  
+
+  
+</form>
+   
+  </div>
+
+ <div data-role="footer" data-position="fixed">
+   <div data-role="navbar">
+      <ul>
+        <li><a href="#biao" >标准</a></li>
+        <li><a href="#liang" >摄入量</a></li>
+        <li><a href="#zhong" >体重</a></li>
+        <li><a href="#tong"  class="ui-btn-active ui-state-persist" >统计</a></li>
+      </ul>
+ </div>
+  <h1>BIPT-02</h1>
+  </div>
+<script type="text/javascript">
+
+ $('#tijiaokg').on('click', function() {
+		   localStorage.dkg = $("#dkg").val();
+           localStorage.mkg = $("#mkg").val();
+      alert("保存成功");
+    });
+
+
+
+$(function () {
+    
+            function loadUserInfo() {
+			  one.value=localStorage.one;
+			  two.value=localStorage.two;
+			  three.value=localStorage.three;
+			  four.value=localStorage.four;
+			  five.value=localStorage.five;
+			  six.value=localStorage.six;
+			  seven.value=localStorage.seven;
+              totle_liang.value = localStorage.total+"kg";
+			  
+			  
+			  
+			  one1.value=localStorage.one1;
+			  two2.value=localStorage.two2;
+			   three3.value=localStorage.three3;
+			  four4.value=localStorage.four4;
+			  five5.value=localStorage.five5;
+			  six6.value=localStorage.six6;
+			  
+			  dkg.value=localstorage.dkg;
+			   mkg.value=localstorage.mkg;
+			  
+			}
+           
+            loadUserInfo();
+            
+        
+});
+
+
+
+    $('#tijiao').on('click', function() {
+		   localStorage.zhanghao = $("#zhanghao").val();
+           localStorage.mima = $("#mima").val();
+      alert('注册成功');
+    });
+	 $('#denglu').on('click', function() {
+		 if($("#fullname").val()!=localStorage.zhanghao||$("#pwd").val()!=localStorage.mima){
+		alert('账号或密码错误');	
+		 }else{
+			 window.location.href='#liang'; 
+			 }
+      
+    });
+	
+	 $('#tijiao1,#tijiao2,#tijiao3,#tijiao4,#tijiao5,#tijiao6,#tijiao7').on('click', function() {
+		   localStorage.one = $("#one").val();
+           localStorage.two = $("#two").val();
+		   localStorage.three = $("#three").val();
+		   localStorage.four = $("#four").val();
+		   localStorage.five = $("#five").val();
+		   localStorage.six = $("#six").val();
+		   localStorage.seven = $("#seven").val();
+		   localStorage.total= parseInt($("#one").val())+ parseInt($("#two").val())+ parseInt($("#three").val())+parseInt($("#four").val())+parseInt($("#five").val())+parseInt( $("#six").val())+parseInt($("#seven").val());
+		   totle_liang.value = localStorage.total+"kg";
+    });
+	
+	
+	
+	
+	
+	
+	$('#1tijiao').on('click',function(){
+		
+		
+		 localStorage.one1 = $("#one1").val();
+         localStorage.two2 = $("#two2").val();
+		 localStorage.three3 = $("#three3").val();
+         localStorage.four4 = $("#four4").val();
+		 localStorage.five5 =$("#five5").val();
+		 localStorage.six6 =  $("#six6").val();
+	
+		});
+		
+		
+	$('#2tijiao').on('click',function(){
+		 localStorage.one1 = $("#one1").val();
+         localStorage.two2 = $("#two2").val();
+		 localStorage.three3 =$("#three3").val();
+         localStorage.four4 = $("#four4").val();
+		 localStorage.five5 = $("#five5").val();
+		 localStorage.six6 =  $("#six6").val();
+		 if(parseInt($("#two2").val())> parseInt($("#one1").val())){
+			 localStorage.totle_tizhong=parseInt($("#two2").val())-parseInt($("#one1").val());
+			 totle_tizhong.value = "你胖了"+localStorage.totle_tizhong+"kg";
+		 }else if(parseInt($("#two2").val()) < parseInt($("#one1").val())){
+			 
+			 localStorage.totle_tizhong=parseInt($("#one1").val())-parseInt($("#two2").val());
+			 totle_tizhong.value = "你瘦了："+localStorage.totle_tizhong+"kg";
+			 
+		 }else{
+			 
+			 localStorage.totle_tizhong="你没变！"
+			 totle_tizhong.value = localStorage.totle_tizhong;
+			 }
+	
+		});
+		$('#3tijiao').on('click',function(){
+		 localStorage.one1 = $("#one1").val();
+         localStorage.two2 = $("#two2").val();
+		 localStorage.three3 =$("#three3").val();
+         localStorage.four4 = $("#four4").val();
+		 localStorage.five5 = $("#five5").val();
+		 localStorage.six6 =  $("#six6").val();
+		 if(parseInt($("#three3").val())> parseInt($("#two2").val())){
+			 localStorage.totle_tizhong=parseInt($("#three3").val())-parseInt($("#two2").val());
+			 totle_tizhong.value = "你胖了："+localStorage.totle_tizhong+"kg";
+		 }else if(parseInt($("#three3").val())<parseInt($("#two2").val())){
+			 
+			 localStorage.totle_tizhong=parseInt($("#two2").val())-parseInt($("#three3").val());
+			 totle_tizhong.value = "你瘦了："+localStorage.totle_tizhong+"kg";
+			 
+		 }else{
+			 
+			 localStorage.totle_tizhong="你没变！"
+			 totle_tizhong.value = localStorage.totle_tizhong;
+			 }
+	
+		});
+		$('#4tijiao').on('click',function(){
+		 localStorage.one1 = $("#one1").val();
+         localStorage.two2 = $("#two2").val();
+		 localStorage.three3 =$("#three3").val();
+         localStorage.four4 = $("#four4").val();
+		 localStorage.five5 = $("#five5").val();
+		 localStorage.six6 =  $("#six6").val();
+		 if(parseInt($("#four4").val())> parseInt($("#three3").val())){
+			 localStorage.totle_tizhong=parseInt($("#four4").val())-parseInt($("#three3").val());
+			 totle_tizhong.value = "你胖了："+localStorage.totle_tizhong+"kg";
+		 }else if(parseInt($("#four4").val())< parseInt($("#three3").val())){
+			 
+			 localStorage.totle_tizhong=parseInt($("#three3").val())-parseInt($("#four4").val());
+			 totle_tizhong.value = "你瘦了："+localStorage.totle_tizhong+"kg";
+			 
+		 }else{
+			 
+			 localStorage.totle_tizhong="你没变！"
+			 totle_tizhong.value = localStorage.totle_tizhong;
+			 }
+	
+		});
+		$('#5tijiao').on('click',function(){
+		 localStorage.one1 = $("#one1").val();
+         localStorage.two2 = $("#two2").val();
+		 localStorage.three3 =$("#three3").val();
+         localStorage.four4 = $("#four4").val();
+		 localStorage.five5 = $("#five5").val();
+		 localStorage.six6 =  $("#six6").val();
+		 if(parseInt($("#five5").val())> parseInt($("#four4").val())){
+			 localStorage.totle_tizhong=parseInt($("#five5").val())-parseInt($("five4").val());
+			 totle_tizhong.value = "你胖了："+localStorage.totle_tizhong+"kg";
+		 }else if(parseInt($("#five5").val())< parseInt($("#four4").val())){
+			 
+			 localStorage.totle_tizhong=parseInt($("#four4").val())-parseInt($("#five5").val());
+			 totle_tizhong.value = "你瘦了："+localStorage.totle_tizhong+"kg";
+			 
+		 }else{
+			 
+			 localStorage.totle_tizhong="你没变！"
+			 totle_tizhong.value = localStorage.totle_tizhong;
+			 }
+	
+		});
+		$('#6tijiao').on('click',function(){
+		 localStorage.one1 = $("#one1").val();
+         localStorage.two2 = $("#two2").val();
+		 localStorage.three3 =$("#three3").val();
+         localStorage.four4 = $("#four4").val();
+		 localStorage.five5 = $("#five5").val();
+		 localStorage.six6 =  $("#six6").val();
+		 if(parseInt($("#six6").val())> parseInt($("#five5").val())){
+			 localStorage.totle_tizhong=parseInt($("#six6").val())-parseInt($("#five5").val());
+			 totle_tizhong.value = "你胖了："+localStorage.totle_tizhong+"kg";
+		 }else if(parseInt($("#six6").val())<parseInt($("#five5").val())){
+			 
+			 localStorage.totle_tizhong=parseInt($("#five5").val())-parseInt($("#six6").val());
+			 totle_tizhong.value = "你瘦了："+localStorage.totle_tizhong+"kg";
+			 
+		 }else{
+			 
+			 localStorage.totle_tizhong="你没变！"
+			 totle_tizhong.value = localStorage.totle_tizhong;
+			 }
+	
+		});
+
+
+
+
+      $('#re').on('click', function() {
+		  
+		  zongkg.value=localStorage.six6+"KG";
+		  if(parseInt($("#six6").val())> parseInt($("#mkg").val())){
+			  localStorage.xiaoguo=parseInt($("#six6").val())-parseInt($("#mkg").val());
+			  xiaoguo.value="最终你还差"+ localStorage.xiaoguo+"KG就成功了！！！！！";
+			  zongjie.value="减肥失败！！！！"
+			  adv.value="继续努力"
+			  }else if( parseInt($("#six6").val())< parseInt($("#mkg").val())){
+				  
+				   localStorage.xiaoguo=parseInt($("#dkg").val())-parseInt($("#six6").val());
+				  xiaoguo.value="最终你瘦了"+ localStorage.xiaoguo+"KG!!!!!";
+				  zongjie.value="减肥非常成功！！！！！！！"
+				  adv.value="保持这种苗条的身材"
+				  
+			  }else{
+				  
+				  xiaoguo.value="你成功了"
+				  
+				  }
+		   
+    });
+    
+
+
+</script>
+</div>
+
+
+
+
+
+
+</body>
+</html>
